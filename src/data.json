@@ -1,0 +1,267 @@
+{
+    "hero": {
+        "title": "Hello, I'm Ansh Garg",
+        "subtitle": "Software Developer",
+        "cta": "Got a project?",
+        "resume": "My resume",
+        "image": "/image1.png",
+        "techStack": [
+            "HTML5",
+            "CSS",
+            "Javascript",
+            "Node.js",
+            "Python",
+            "Langchain",
+            "Github"
+        ]
+    },
+    "codingProfiles": [
+        {
+            "platform": "LeetCode",
+            "icon": "SiLeetcode",
+            "rating": "1671",
+            "solved": "550+",
+            "link": "https://www.leetcode.com/users/gargansh247",
+            "color": "#FFA116"
+        },
+        {
+            "platform": "CodeChef",
+            "icon": "SiCodechef",
+            "rating": "1616 (3★)",
+            "solved": "50+",
+            "link": "https://www.codechef.com/users/gargansh247",
+            "color": "#5B4638"
+        },
+        {
+            "platform": "Codeforces",
+            "icon": "SiCodeforces",
+            "rating": "1118",
+            "solved": "50+",
+            "link": "https://codeforces.com/profile/gargansh247",
+            "color": "#1F8ACB"
+        }
+    ],
+    "about": {
+        "bio": "I started my software journey from MERN stack. Through that, I learned to love the process of creating from scratch. Since then, this has led me to software development as it fulfills my love for learning and building things.",
+        "stats": {
+            "projects": "15 +",
+            "satisfaction": "95 %",
+            "experience": "1 +"
+        },
+        "services": [
+            {
+                "title": "Website Development",
+                "icon": "Monitor"
+            },
+            {
+                "title": "Agentic AI",
+                "icon": "Smartphone"
+            },
+            {
+                "title": "Website Hosting",
+                "icon": "Server"
+            }
+        ]
+    },
+    "experience": [
+        {
+            "role": "Software Engineer Intern",
+            "company": "Hero MotoCorp Pvt. Ltd.",
+            "date": "Jun 2025 - Aug 2025",
+            "description": [
+                "Developed an Agentic LLM-driven backend using LangChain to autonomously interpret frontend queries and execute operations, eliminating the need for traditional route-based API handling.",
+                "Engineered a Proof of Concept (POC) using low-code/no-code platforms (Appian, Zoho, Mendix) for workflow automation and role-based approvals.",
+                "Implemented automated email notifications and data dashboards, resulting in a 3x faster deployment cycle for internal tools."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "StudMate",
+            "description": [
+                "Developed a full-stack web platform for student attendance tracking, teacher feedback collection, and alumni–student interaction through real-time chat.",
+                "Implemented secure authentication and role-based access using JWT, supporting 1,000+ concurrent users and improving attendance tracking efficiency by 90%.",
+                "Integrated Socket.IO to enable real-time messaging between students and alumni, supporting scalable communication for 500+ active users."
+            ],
+            "tech": [
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Socket.io"
+            ],
+            "github": "https://github.com/Ansh-Garg22/StudMate",
+            "demo": "https://github.com/Ansh-Garg22/StudMate",
+            "image": "/studmate.png"
+        },
+        {
+            "title": "ResumeRAG Chatbot",
+            "description": [
+                "Built an AI-powered Resume Analysis system using a RAG architecture to enable semantic search, filtering, and summarization across 1000+ PDF resumes.",
+                "Implemented a hybrid retrieval pipeline combining semantic vector search (ChromaDB + HuggingFace MiniLM embeddings) with LLM-driven structured metadata extraction using Llama-3 via Groq."
+            ],
+            "tech": [
+                "LangChain",
+                "Python",
+                "HuggingFace",
+                "ChromaDB",
+                "Llama-3",
+                "Groq"
+            ],
+            "github": "https://github.com/Ansh-Garg22/Resume_Chatbot_RAGBased",
+            "demo": "https://resumechatbotragbased.streamlit.app/",
+            "image": "/resumerag.png"
+        },
+        {
+            "title": "Real-time Chat Application",
+            "description": [
+                "Developed a full-stack instant messaging platform featuring real-time bi-directional communication using Socket.io.",
+                "Implemented secure User Authentication and Authorization using JSON Web Tokens (JWT) and bcrypt password hashing.",
+                "Engineered persistent chat history storage with MongoDB, allowing users to retrieve past messages seamlessly.",
+                "Designed a responsive UI with real-time 'user typing' indicators and online/offline status updates."
+            ],
+            "tech": [
+                "React",
+                "Node.js",
+                "Socket.io",
+                "MongoDB",
+                "Express",
+                "Tailwind CSS",
+                "JWT"
+            ],
+            "github": "https://github.com/Ansh-Garg22/Real-time-Chat",
+            "demo": "https://chat-deployed.onrender.com/",
+            "image": "/chatapp.png"
+        }
+    ],
+    "skills": [
+        {
+            "category": "Languages",
+            "items": [
+                {
+                    "name": "C",
+                    "icon": "SiC"
+                },
+                {
+                    "name": "C++",
+                    "icon": "SiCplusplus"
+                },
+                {
+                    "name": "Python",
+                    "icon": "SiPython"
+                },
+                {
+                    "name": "JavaScript",
+                    "icon": "SiJavascript"
+                }
+            ]
+        },
+        {
+            "category": "Web & Tools",
+            "items": [
+                {
+                    "name": "HTML",
+                    "icon": "SiHtml5"
+                },
+                {
+                    "name": "CSS",
+                    "icon": "SiCss3"
+                },
+                {
+                    "name": "Bootstrap",
+                    "icon": "SiBootstrap"
+                },
+                {
+                    "name": "Git",
+                    "icon": "SiGit"
+                },
+                {
+                    "name": "GitHub",
+                    "icon": "SiGithub"
+                },
+                {
+                    "name": "Postman",
+                    "icon": "SiPostman"
+                }
+            ]
+        },
+        {
+            "category": "Frameworks",
+            "items": [
+                {
+                    "name": "Node.js",
+                    "icon": "SiNodedotjs"
+                },
+                {
+                    "name": "Express.js",
+                    "icon": "SiExpress"
+                },
+                {
+                    "name": "LangChain",
+                    "icon": "FaLink"
+                },
+                {
+                    "name": "Hugging Face",
+                    "icon": "SiHuggingface"
+                },
+                {
+                    "name": "FastAPI",
+                    "icon": "SiFastapi"
+                }
+            ]
+        },
+        {
+            "category": "Databases",
+            "items": [
+                {
+                    "name": "MongoDB",
+                    "icon": "SiMongodb"
+                },
+                {
+                    "name": "MySQL",
+                    "icon": "SiMysql"
+                }
+            ]
+        }
+    ],
+    "interests": [
+        {
+            "name": "Photography",
+            "icon": "Camera"
+        },
+        {
+            "name": "Hiking",
+            "icon": "Mountain"
+        },
+        {
+            "name": "Traveling",
+            "icon": "Plane"
+        },
+        {
+            "name": "Movies & Series",
+            "icon": "Film"
+        },
+        {
+            "name": "Badminton",
+            "icon": "Trophy"
+        },
+        {
+            "name": "Agentic AI Research",
+            "icon": "Bot"
+        }
+    ],
+    "contact": {
+        "email": "gargansh247@gmail.com",
+        "github": "https://github.com/Ansh-Garg22",
+        "linkedin": "https://linkedin.com/in/ansh-garg-b968a1271",
+        "socialLinks": [
+            {
+                "platform": "GitHub",
+                "url": "https://github.com/Ansh-Garg22"
+            },
+            {
+                "platform": "LinkedIn",
+                "url": "https://linkedin.com/in/ansh-garg-b968a1271"
+            }
+        ]
+    }
+}
