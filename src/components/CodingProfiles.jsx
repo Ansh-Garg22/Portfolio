@@ -70,7 +70,7 @@ const CodingProfiles = () => {
                                         <p className="text-lg font-bold text-white">{profile.rating}</p>
                                     </div>
                                     <div className="text-right">
-                                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Solved</p>
+                                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Problems Solved</p>
                                         <p className="text-lg font-bold text-primary">{profile.solved}</p>
                                     </div>
                                 </div>

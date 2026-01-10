@@ -1,7 +1,7 @@
 {
     "hero": {
         "title": "Hello, I'm Ansh Garg",
-        "subtitle": "Software Developer",
+        "subtitle": "Software Engineer",
         "cta": "Got a project?",
         "resume": "My resume",
         "image": "/image1.png",
@@ -28,7 +28,7 @@
             "platform": "CodeChef",
             "icon": "SiCodechef",
             "rating": "1616 (3★)",
-            "solved": "50+",
+            "solved": "55+",
             "link": "https://www.codechef.com/users/gargansh247",
             "color": "#5B4638"
         },
@@ -42,23 +42,27 @@
         }
     ],
     "about": {
-        "bio": "I started my software journey from MERN stack. Through that, I learned to love the process of creating from scratch. Since then, this has led me to software development as it fulfills my love for learning and building things.",
+        "bio": "I’m essentially someone who loves to solve puzzles with code so I can convince machines to do the hard work for me. I love building smart AI agents and solid backends that can actually \"think\" through a problem instead of just following a script. I spend a lot of my time hanging out with LLMs and figuring out how to automate the boring stuff, mostly because I believe technology should make our lives simpler, not more complicated. If there’s a way to use logic to build something that feels like a shortcut to the future, I’m probably already trying to build it",
         "stats": {
             "projects": "15 +",
-            "satisfaction": "95 %",
+            "satisfaction": "600+",
             "experience": "1 +"
         },
         "services": [
             {
-                "title": "Website Development",
+                "title": "Full stack developer",
                 "icon": "Monitor"
             },
             {
-                "title": "Agentic AI",
+                "title": "Agentic AI & RAG",
                 "icon": "Smartphone"
             },
             {
-                "title": "Website Hosting",
+                "title": "Problem Solving",
+                "icon": "Bulb"
+            },
+            {
+                "title": "Automation",
                 "icon": "Server"
             }
         ]
@@ -87,7 +91,8 @@
                 "Node.js",
                 "Express.js",
                 "MongoDB",
-                "Socket.io"
+                "Socket.io",
+                "Javascript"
             ],
             "github": "https://github.com/Ansh-Garg22/StudMate",
             "demo": "https://github.com/Ansh-Garg22/StudMate",
@@ -120,13 +125,12 @@
                 "Designed a responsive UI with real-time 'user typing' indicators and online/offline status updates."
             ],
             "tech": [
-                "React",
                 "Node.js",
                 "Socket.io",
                 "MongoDB",
                 "Express",
-                "Tailwind CSS",
-                "JWT"
+                "JWT",
+                "Javascript"
             ],
             "github": "https://github.com/Ansh-Garg22/Real-time-Chat",
             "demo": "https://chat-deployed.onrender.com/",
@@ -237,16 +241,12 @@
             "icon": "Plane"
         },
         {
-            "name": "Movies & Series",
+            "name": "Movies & WebSeries",
             "icon": "Film"
         },
         {
             "name": "Badminton",
             "icon": "Trophy"
-        },
-        {
-            "name": "Agentic AI Research",
-            "icon": "Bot"
         }
     ],
     "contact": {

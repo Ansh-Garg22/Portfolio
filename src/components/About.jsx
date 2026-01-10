@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import data from '../data.json';
-import { Monitor, Smartphone, Server } from 'lucide-react';
+import { Monitor, Smartphone, Server, Lightbulb } from 'lucide-react';
 
 const iconMap = {
     Monitor: Monitor,
     Smartphone: Smartphone,
+    Bulb: Lightbulb,
     Server: Server
 };
 
@@ -26,8 +27,9 @@ const About = () => {
                         <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gray-800 h-full">
                             {/* Active dots */}
                             <div className="absolute top-[15%] left-[-4px] w-2.5 h-2.5 bg-primary rounded-full"></div>
-                            <div className="absolute top-[50%] left-[-4px] w-2.5 h-2.5 bg-primary rounded-full"></div>
-                            <div className="absolute top-[85%] left-[-4px] w-2.5 h-2.5 bg-primary rounded-full"></div>
+                            <div className="absolute top-[41%] left-[-4px] w-2.5 h-2.5 bg-primary rounded-full"></div>
+                            <div className="absolute top-[65%] left-[-4px] w-2.5 h-2.5 bg-primary rounded-full"></div>
+                            <div className="absolute top-[89%] left-[-4px] w-2.5 h-2.5 bg-primary rounded-full"></div>
                         </div>
 
                         {data.about.services.map((service, index) => {
@@ -68,7 +70,7 @@ const About = () => {
                                 <h4 className="text-4xl font-bold text-white mb-2">
                                     {data.about.stats.satisfaction}
                                 </h4>
-                                <span className="text-sm text-gray-500 uppercase tracking-wider">Client Satisfaction</span>
+                                <span className="text-sm text-gray-500 uppercase tracking-wider">Problems Solved</span>
                             </div>
                             <div>
                                 <h4 className="text-4xl font-bold text-white mb-2">

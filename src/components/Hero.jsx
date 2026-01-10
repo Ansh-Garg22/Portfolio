@@ -15,7 +15,6 @@ const getIcon = (iconName) => {
         "CSS": SiIcons.SiCss3,
         "Javascript": SiIcons.SiJavascript,
         "Node.js": SiIcons.SiNodedotjs,
-        "React": SiIcons.SiReact,
         "Python": SiIcons.SiPython,
         "Langchain": SiIcons.SiLangchain,
         "Github": SiIcons.SiGithub
