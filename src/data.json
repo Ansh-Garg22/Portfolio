@@ -68,6 +68,14 @@
             }
         ]
     },
+    "education": [
+        {
+            "institution": "National Institute of Technology, Kurukshetra",
+            "degree": "Bachelor of Technology in Computer Science",
+            "period": "2022 - 2026",
+            "description": "Relevant coursework: Data Structures, Algorithms, Web Development, DBMS, OOPs , Operating System, Machine Learning."
+        }
+    ],
     "experience": [
         {
             "role": "Software Engineer Intern",
