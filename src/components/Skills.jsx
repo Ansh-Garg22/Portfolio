@@ -39,7 +39,7 @@ const Skills = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ amount: 0.1 }}
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
@@ -53,7 +53,7 @@ const Skills = () => {
                             key={category.category}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ amount: 0.1 }}
                             transition={{ duration: 0.6, delay: catIndex * 0.1 }}
                         >
                             <h3 className="text-2xl font-bold text-gray-300 mb-8 border-l-4 border-primary pl-4">

@@ -26,7 +26,6 @@ const Interests = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
                     transition={{ duration: 0.3 }}
                     className="text-center mb-16"
                 >
@@ -46,7 +45,6 @@ const Interests = () => {
                                 key={index}
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
                                 transition={{ duration: 0.2, delay: index * 0.03 }}
                                 whileHover={{ y: -5, backgroundColor: 'rgba(255, 107, 107, 0.1)', borderColor: '#ff6b6b', transition: { duration: 0.2 } }}
                                 className="flex flex-col items-center justify-center p-6 bg-dark border border-gray-800 rounded-xl w-36 h-36 sm:w-40 sm:h-40 transition-all duration-200 cursor-default"

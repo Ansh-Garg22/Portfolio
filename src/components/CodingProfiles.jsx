@@ -18,7 +18,7 @@ const CodingProfiles = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ amount: 0.1 }}
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
@@ -38,7 +38,7 @@ const CodingProfiles = () => {
                             rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ amount: 0.1 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             whileHover={{ y: -10, scale: 1.02, transition: { duration: 0.2 } }}
                             className="relative group bg-secondary/50 backdrop-blur-sm border border-gray-800 p-8 rounded-2xl overflow-hidden hover:border-gray-600 transition-all duration-200 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-2rem)] max-w-sm"

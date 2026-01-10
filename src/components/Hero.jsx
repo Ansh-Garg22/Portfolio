@@ -14,6 +14,7 @@ const getIcon = (iconName) => {
         "HTML5": SiIcons.SiHtml5,
         "CSS": SiIcons.SiCss3,
         "Javascript": SiIcons.SiJavascript,
+        "React.js": SiIcons.SiReact,
         "Node.js": SiIcons.SiNodedotjs,
         "Python": SiIcons.SiPython,
         "Langchain": SiIcons.SiLangchain,
@@ -188,16 +189,80 @@ const Hero = () => {
             </div>
 
             {/* Skills Strip */}
-            <div className="w-full bg-secondary/30 mt-12 py-8 border-t border-gray-800">
-                <div className="container mx-auto px-8 md:px-12 overflow-hidden">
-                    <div className="flex justify-between items-center flex-wrap gap-8 md:gap-0 opacity-60 hover:opacity-100 transition-opacity duration-500">
-                        {data.hero.techStack.map((tech, index) => (
-                            <div key={index} className="flex items-center text-xl md:text-2xl font-bold text-gray-400 uppercase tracking-widest hover:text-primary transition-colors cursor-default group">
+            {/* Skills Strip */}
+            <div className="w-full bg-secondary/30 mt-12 py-8 border-t border-gray-800 overflow-hidden">
+                {/* Desktop View (Single Line) */}
+                <div className="hidden md:flex">
+                    <motion.div
+                        className="flex flex-nowrap gap-16 items-center"
+                        animate={{ x: "-50%" }}
+                        transition={{
+                            ease: "linear",
+                            duration: 25,
+                            repeat: Infinity,
+                        }}
+                    >
+                        {[...data.hero.techStack, ...data.hero.techStack].map((tech, index) => (
+                            <div key={index} className="flex items-center text-xl md:text-2xl font-bold text-gray-400 uppercase tracking-widest hover:text-primary transition-colors cursor-default whitespace-nowrap flex-shrink-0 group">
                                 <span className="text-gray-500 group-hover:text-primary transition-colors">{getIcon(tech)}</span>
                                 {tech}
                             </div>
                         ))}
-                    </div>
+                    </motion.div>
+                </div>
+
+                {/* Mobile View (Dual Lines, Opposite Direction) */}
+                <div className="md:hidden flex flex-col gap-6">
+                    {(() => {
+                        const mid = Math.ceil(data.hero.techStack.length / 2);
+                        const row1 = data.hero.techStack.slice(0, mid);
+                        const row2 = data.hero.techStack.slice(mid);
+
+                        // Helper to render items
+                        const renderItems = (items) => (
+                            [...items, ...items, ...items, ...items].map((tech, index) => (
+                                <div key={index} className="flex items-center text-lg font-bold text-gray-400 uppercase tracking-widest hover:text-primary transition-colors cursor-default whitespace-nowrap flex-shrink-0 group">
+                                    <span className="text-gray-500 group-hover:text-primary transition-colors">{getIcon(tech)}</span>
+                                    {tech}
+                                </div>
+                            ))
+                        );
+
+                        return (
+                            <>
+                                {/* Row 1: Left Direction */}
+                                <div className="flex overflow-hidden">
+                                    <motion.div
+                                        className="flex flex-nowrap gap-8 items-center"
+                                        animate={{ x: "-50%" }}
+                                        transition={{
+                                            ease: "linear",
+                                            duration: 15,
+                                            repeat: Infinity,
+                                        }}
+                                    >
+                                        {renderItems(row1)}
+                                    </motion.div>
+                                </div>
+
+                                {/* Row 2: Right Direction */}
+                                <div className="flex overflow-hidden">
+                                    <motion.div
+                                        className="flex flex-nowrap gap-8 items-center"
+                                        initial={{ x: "-50%" }}
+                                        animate={{ x: "0%" }}
+                                        transition={{
+                                            ease: "linear",
+                                            duration: 15,
+                                            repeat: Infinity,
+                                        }}
+                                    >
+                                        {renderItems(row2)}
+                                    </motion.div>
+                                </div>
+                            </>
+                        );
+                    })()}
                 </div>
             </div>
         </section>

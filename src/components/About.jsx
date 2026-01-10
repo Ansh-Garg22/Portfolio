@@ -46,7 +46,6 @@ const About = () => {
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                         className="w-full md:w-1/3 space-y-8 relative"
                     >
