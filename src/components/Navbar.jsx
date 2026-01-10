@@ -24,6 +24,28 @@ const Navbar = () => {
         { name: 'Contact', href: '#contact' },
     ];
 
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        setIsOpen(false);
+
+        const targetId = href.replace('#', '');
+
+        // Delay scrolling slightly to allow the menu close animation to start/finish
+        // This prevents race conditions where layout shifts might interrupt the scroll
+        setTimeout(() => {
+            const element = document.getElementById(targetId);
+            if (element) {
+                const offsetTop = element.offsetTop;
+                window.scrollTo({
+                    top: offsetTop - 80, // Adjust ensuring navbar doesn't cover header
+                    behavior: 'smooth'
+                });
+                // Optional: update URL hash without jump
+                window.history.pushState(null, '', href);
+            }
+        }, 100); // 100ms should be enough to detach the touch event/animation start
+    };
+
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-dark/95 backdrop-blur-md shadow-lg' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-8 md:px-12 h-16 flex items-center justify-between">
@@ -37,6 +59,18 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const targetId = link.href.replace('#', '');
+                                const element = document.getElementById(targetId);
+                                if (element) {
+                                    const offsetTop = element.offsetTop;
+                                    window.scrollTo({
+                                        top: offsetTop - 80,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }}
                             className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium uppercase tracking-wider relative group"
                         >
                             {link.name}
@@ -66,7 +100,7 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     className="text-gray-300 hover:text-primary text-lg font-medium"
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={(e) => handleNavClick(e, link.href)}
                                 >
                                     {link.name}
                                 </a>
