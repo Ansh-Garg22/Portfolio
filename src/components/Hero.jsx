@@ -44,13 +44,87 @@ const Hero = () => {
                         className="w-full md:w-1/2 text-left"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-baseline">
-                            Hello<span className="text-primary text-4xl">.</span>
+                            {/* Typing Effect for "Hello" */}
+                            <motion.span
+                                initial="hidden"
+                                animate="visible"
+                                variants={{
+                                    hidden: { opacity: 0 },
+                                    visible: {
+                                        opacity: 1,
+                                        transition: {
+                                            staggerChildren: 0.1
+                                        }
+                                    }
+                                }}
+                            >
+                                {"Hello".split("").map((char, index) => (
+                                    <motion.span
+                                        key={index}
+                                        variants={{
+                                            hidden: { opacity: 0, y: 10 },
+                                            visible: { opacity: 1, y: 0 }
+                                        }}
+                                    >
+                                        {char}
+                                    </motion.span>
+                                ))}
+                            </motion.span>
+                            <span className="text-primary text-4xl">.</span>
                         </h2>
 
                         <div className="flex items-center gap-4 mb-2">
                             <div className="h-[2px] w-12 bg-primary"></div>
-                            <h3 className="text-2xl md:text-3xl text-gray-300 font-light">
-                                {data.hero.title.split(",")[0].replace("Hello", "")} {data.hero.title.split("I'm ")[1]}
+                            <h3 className="text-2xl md:text-3xl text-gray-300 font-light flex">
+                                {/* Typing Effect for Name */}
+                                <motion.span
+                                    initial="hidden"
+                                    animate="visible"
+                                    variants={{
+                                        hidden: { opacity: 0 },
+                                        visible: {
+                                            opacity: 1,
+                                            transition: {
+                                                delayChildren: 0.5, // Start after Hello
+                                                staggerChildren: 0.08
+                                            }
+                                        }
+                                    }}
+                                >
+                                    {/* Using data.hero.title to reconstruct the name part dynamically might be tricky if structure varies.
+                                        Assuming structure is stable based on line 53: {data.hero.title.split(",")[0].replace("Hello", "")} {data.hero.title.split("I'm ")[1]}
+                                        Let's just animate the full text string derived from that logic.
+                                    */}
+                                    {(() => {
+                                        const part1 = data.hero.title.split(",")[0].replace("Hello", "").trim();
+                                        const part2 = data.hero.title.split("I'm ")[1];
+                                        const fullText = `${part1} I'm ${part2}`; // Reconstructing "I am Ansh Garg" or similar
+
+                                        return fullText.split("").map((char, index) => (
+                                            <motion.span
+                                                key={index}
+                                                variants={{
+                                                    hidden: { opacity: 0, y: 10 },
+                                                    visible: { opacity: 1, y: 0 }
+                                                }}
+                                            >
+                                                {char}
+                                            </motion.span>
+                                        ));
+                                    })()}
+                                </motion.span>
+                                <motion.span
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{
+                                        duration: 0.5,
+                                        repeat: Infinity,
+                                        repeatType: "reverse"
+                                    }}
+                                    className="ml-1 text-primary"
+                                >
+                                    |
+                                </motion.span>
                             </h3>
                         </div>
 
